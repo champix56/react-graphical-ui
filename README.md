@@ -1,6 +1,6 @@
 # react-graphical-ui
 
-> SVG UI Lib, it contaains serie of components to show graphs with values
+> SVG UI Lib, it contains serie of components to show graphs with values
 
 [![NPM](https://img.shields.io/npm/v/react-graphical-ui.svg)](https://www.npmjs.com/package/react-graphical-ui) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -24,7 +24,3 @@ class Example extends Component {
   }
 }
 ```
-
-## License
-
-MIT © [champix56](https://github.com/champix56)
