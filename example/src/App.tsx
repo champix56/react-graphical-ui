@@ -30,7 +30,7 @@ const App = () => {
       <h2>CloudPoints graphs components</h2>
       <h3>&lt;CloudPoints values=&#123;[125,547,451,123,40,330]&#125; max=&#123;550&#125;/&gt;</h3>
       <CloudPoints values={[125,547,451,123,40,330]} max={550}></CloudPoints>
-      <CloudPoints values={[12,60,51,23,40,30]}></CloudPoints>
+      <CloudPoints values={[40,31,23,40,30,12,23]}></CloudPoints>
     </div>
   </>
 }
