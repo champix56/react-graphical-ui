@@ -1,7 +1,7 @@
 {
   "name": "react-graphical-ui",
-  "version": "1.0.0",
-  "description": "SVG UI Lib, it contaains serie of components to show graphs with values",
+  "version": "0.0.1a",
+  "description": "SVG UI Lib, it contains serie of components to show graphs with values",
   "author": "champix56",
   "license": "MIT",
   "repository": "champix56/react-graphical-ui",
@@ -12,6 +12,7 @@
     "node": ">=10"
   },
   "scripts": {
+    "prepublish": "npm run build",
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
     "prepare": "run-s build",
@@ -20,8 +21,8 @@
     "test:lint": "eslint .",
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
-    "predeploy": "cd example && npm install && npm run build",
-    "deploy": "gh-pages -d example/build"
+    "predeploy": "cd docs && npm install && npm run build",
+    "deploy": "gh-pages -d docs/build"
   },
   "peerDependencies": {
     "react": "^16.0.0"
@@ -59,8 +60,5 @@
   },
   "files": [
     "dist"
-  ],
-  "dependencies": {
-    "tslint": "^6.1.2"
-  }
+  ]
 }
