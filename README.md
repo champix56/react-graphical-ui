@@ -37,8 +37,28 @@ import { Circular } from 'react-graphical-ui';
 * display : string, 'inline' | 'block' def. = 'inline'
 * withGrid : boolean, def. = false
 
+## GraphHistogram
+
+Show value as a Histogram graph with values send by props
+
+```tsx
+import { Histogram } from 'react-graphical-ui';
+<Histogram values={[ 20, 80, 19]} notAllreadyFull={true} whithGrid={true} gridDivisionCount={5} max={150} />
+```
+
+* values  : [number], required values to show
+* max? : number,  def. = max value in values list
+* display : string, 'inline' | 'block' def. = 'inline'
+* notAllreadyFull : boolean,next horizontal step spce on graph, def. = false
+* withGrid : boolean, def. = true
+* gridDivisionCount : number, number of horizontal divisions def. = 10
+
 ## ***version note:***
 
 ### V 0.0.1
 
   Add Circular component
+
+### V 0.0.2
+
+  Add Histogram component
