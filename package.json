@@ -1,6 +1,6 @@
 {
   "name": "react-graphical-ui",
-  "version": "0.0.1a",
+  "version": "0.0.3",
   "description": "SVG UI Lib, it contains serie of components to show graphs with values",
   "author": "champix56",
   "license": "MIT",
