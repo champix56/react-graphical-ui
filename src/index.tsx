@@ -10,4 +10,5 @@ export const ExampleComponent = ({ text }: Props) => {
 }
 
 export  {default as Circular } from "./GraphCircular/Graphcircular";
+export  {default as Histogram } from "./GraphHistogram/GraphHistogram";
 
