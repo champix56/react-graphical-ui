@@ -37,8 +37,28 @@ import { Circular } from 'react-graphical-ui';
 * display : string, 'inline' | 'block' def. = 'inline'
 * withGrid : boolean, def. = false
 
+## GraphCloudPoint
+
+Show value as a cloud points graph with values
+
+```tsx
+import { CloudPoint } from 'react-graphical-ui';
+<CloudPoint value={[47,18]}  max={100} display="inline" withGrid={true} />
+```
+
+* value  : number, required value to show
+* max? : number,  def. = 100
+* display : string, 'inline' |or 'block' def. = 'inline'
+* withGrid : boolean, def. = false
+* notAllreadyFull : boolean,next horizontal step spce on graph, def. = false
+* gridDivisionCount : number, number of horizontal divisions def. = 10
+
 ## ***version note:***
 
 ### V 0.0.1
 
   Add Circular component
+
+### V 0.0.3
+
+  Add Cloud points component
