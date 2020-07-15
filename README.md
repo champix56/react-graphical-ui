@@ -53,6 +53,22 @@ import { Histogram } from 'react-graphical-ui';
 * withGrid : boolean, def. = true
 * gridDivisionCount : number, number of horizontal divisions def. = 10
 
+## GraphCloudPoint
+
+Show value as a cloud points graph with values
+
+```tsx
+import { CloudPoint } from 'react-graphical-ui';
+<CloudPoint value={[47,18]}  max={100} display="inline" withGrid={true} />
+```
+
+* value  : number, required value to show
+* max? : number,  def. = 100
+* display : string, 'inline' |or 'block' def. = 'inline'
+* withGrid : boolean, def. = false
+* notAllreadyFull : boolean,next horizontal step spce on graph, def. = false
+* gridDivisionCount : number, number of horizontal divisions def. = 10
+
 ## ***version note:***
 
 ### V 0.0.1
@@ -62,3 +78,8 @@ import { Histogram } from 'react-graphical-ui';
 ### V 0.0.2
 
   Add Histogram component
+
+### V 0.0.3
+
+  Add Cloud points component
+  
