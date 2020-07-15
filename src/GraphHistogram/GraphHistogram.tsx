@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './GraphHistogram.module.css';
 
 interface GraphHistogramProps {
-  values: Array<number>,max?: number,
+  values: Array<number>, max?: number,
   height?: string, width?: string, display?: string,
   whithGrid?: boolean, gridDivisionCount?: number, notAllreadyFull?: boolean
 }
@@ -31,6 +31,10 @@ const GraphHistogram: React.FC<GraphHistogramProps> = (props) => {
       height={props.height} width={props.width} display={props.display}
     >
       <defs>
+        <linearGradient id="effetArrondiVertical" x1="0%" x2="100%" y1="20%" y2="0">
+          <stop offset="0%" stopColor="#B7CA79"></stop>
+          <stop offset="80%" stopColor="#677E52"></stop>
+        </linearGradient>
         <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
           markerWidth="6" markerHeight="6"
           orient="auto-start-reverse">
@@ -47,7 +51,7 @@ const GraphHistogram: React.FC<GraphHistogramProps> = (props) => {
       }
       {props.values.flatMap((e, i) => {
         return (
-          <rect key={"r" + i} className={styles.bar} x={i * wrate + 2} y={100 - e * hrate} width={wrate - 5} height={e * hrate} fill="tomato" />
+          <rect key={"r" + i} className={styles.bar} x={i * wrate + 2} y={100 - e * hrate} width={wrate - 1} height={e * hrate} fill="url(#effetArrondiVertical)" />
         );
       })}
       <polyline points="0,-5 0,100 230,100" fill="none" stroke="black"
@@ -56,7 +60,7 @@ const GraphHistogram: React.FC<GraphHistogramProps> = (props) => {
 }
 GraphHistogram.defaultProps = {
   values: [10, 20, 50, 75, 100, 20, 25, 56, 25, 32, 89, 7, 89, 42, 1, 23],
-  display:"inline",
-  width:'48vw'
+  display: "inline",
+  width: '48vw'
 }
 export default GraphHistogram;
