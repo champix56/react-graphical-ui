@@ -7,6 +7,7 @@ interface GraphCloudPointProps{
 }
 const GraphCloudPoint: React.FC<GraphCloudPointProps> = (props) => {
   let maxval = 0;
+  const dynamiseur=(Math.random()*10000).toFixed(0)
   if (!props.max) {
     props.values.forEach(e => {
       maxval = (e > maxval ? e : maxval)
@@ -47,7 +48,7 @@ const GraphCloudPoint: React.FC<GraphCloudPointProps> = (props) => {
       </defs>
       {
         grid.map((e, i) => {
-          return (<g>
+          return (<g key={'graphCloudPoint-'+dynamiseur+'-'+i}>
             <line y1={e.y} x1="0" x2="230" y2={e.y} className={styles.grid} key={'l' + i} />
             <text alignmentBaseline="middle" textAnchor="end" x="-2" y={e.y} className={styles.legendValue} key={'t' + i}>{e.value}</text>
           </g>)

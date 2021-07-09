@@ -84,3 +84,7 @@ import { CloudPoint } from 'react-graphical-ui';
 ### V 0.0.3
 
   Add Cloud points component
+
+### V 0.0.3.1
+
+  Add key for iterated point and bars
